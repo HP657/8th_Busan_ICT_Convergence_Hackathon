@@ -6,9 +6,9 @@ from keras.models import load_model
 import cv2
 import numpy as np
 
-model = load_model(r"C:\Users\junle\Desktop\real_test_model\keras_model.h5", compile=False) #모델 가져오기
+model = load_model(r"keras_model.h5", compile=False) #모델 가져오기
 
-with open(r"C:\Users\junle\Desktop\real_test_model\labels.txt", "r") as file:
+with open(r"labels.txt", "r") as file:
     class_names = [line.strip() for line in file]
 
 ser = serial.Serial('COM6', 9600)  #시리얼 연결 주소
