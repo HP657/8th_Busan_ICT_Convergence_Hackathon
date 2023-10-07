@@ -50,17 +50,17 @@ while True:
         print("너의 상태는 : ", class_name , str(np.round(confidence_score * 100))[:-2], "%")
         if class_name[0] == '0':
             message = "안전"
-            output_path = r'C:\Users\junle\Desktop\123\contest\sample0.mp3'
+            output_path = r'sample0.mp3'
             class_name = '0'
             ser.write(class_name.encode())
         elif class_name[0] == '1':
             message = "경고"
-            output_path = r'C:\Users\junle\Desktop\123\contest\sample1.mp3'
+            output_path = r'sample1.mp3'
             class_name = '1'
             ser.write(class_name.encode())
         else:
             message = "인식 불가"
-            output_path = r'C:\Users\junle\Desktop\123\contest\sample.mp3'
+            output_path = r'sample.mp3'
             ser.write(class_name.encode())
         # TTS로 음성 파일 생성 및 재생
         playsound(output_path)
